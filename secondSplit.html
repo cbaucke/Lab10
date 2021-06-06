@@ -55,12 +55,31 @@
 
       var client = factory.client();
       client.on(client.Event.SDK_READY, function() {
-        var treatment = client.getTreatment('double_column');
+        var treatment = client.getTreatment('dark_mode');
 
         if (treatment === 'on') {
-          document.getElementsByTagName("main")[0].setAttribute("class", "double-column");
+          let all = document.querySelectorAll("*");
+          for(let i = 0; i < all.length; i++){
+            all[i].style.color = "#f2f2f7";
+          }
+          document.getElementsByTagName("body")[0].style.backgroundColor = "#48484a";
+          document.getElementsByTagName("header")[0].style.backgroundColor = "#1c1c1e";
+          let entries = document.querySelectorAll("journal-entry");
+          console.log("Num entries: " + entries.length);
+          for(let i = 0; i < entries.length; i++){
+            entries[i].setAttribute("style", "color: #3d3d3d; background-color: #111111");
+          }
         } else if (treatment === 'off') {
-          document.getElementsByTagName("main")[0].setAttribute("class", "");
+          let all = document.querySelectorAll("*");
+          for(let i = 0; i < all.length; i++){
+            all[i].style.color = "#3d3d3d";
+          }
+          document.getElementsByTagName("body")[0].style.backgroundColor = "#EFECCA";
+          document.getElementsByTagName("header")[0].style.backgroundColor = "#D9D281";
+          let entries = document.querySelectorAll("journal-entry");
+          for(let i = 0; i < entries.length; i++){
+            entries[i].setAttribute("style", "color: #3d3d3d; background-color: #111111");
+          }
         } else {
           // Insert code for control treatment
         }
