@@ -6,3 +6,7 @@ Second split: The difference should be that the "on" treatment turns the backgro
 Link to index.html: [https://cbaucke.github.io/Lab10/index.html](https://cbaucke.github.io/Lab10/index.html)
 
 Link to secondSplit.html: [https://cbaucke.github.io/Lab10/secondSplit.html](https://cbaucke.github.io/Lab10/secondSplit.html)
+
+
+Google Analytics Screenshot:
+![Google Analytics Screenshot](./GoogleAnalytics.png)
